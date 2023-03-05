@@ -8,12 +8,15 @@ $("#h2").css("color", "green")
 
 $("h3").css("color", "blue")
 
-$("p").click(function(){
-  $(this).css({
-  "color": "white",
-  "background-color": "black",
-  "font-size": "18px"
-  });
-  });
-  
+$("p").on({
+  mouseenter: function(){
+    $(this).css("background-color", "lightgray");
+  },
+  mouseleave: function(){
+    $(this).css("background-color", "lightblue");
+  },
+  click: function(){
+    $(this).css("background-color", "yellow");
+  }
+});
   
