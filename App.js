@@ -1,29 +1,28 @@
-$(document).ready(function () {
-  alert("Merhaba");
-});
+// $(document).ready(function () {
+//   alert("Merhaba");
+// });
 
-$("h1").css("color", "red");
+// $("h1").css("color", "red");
 
-$("#h2").css("color", "green");
+// $("#h2").css("color", "green");
 
-$("h3").css("color", "blue");
+// $("h3").css("color", "blue");
 
-$("p").on({
-  mouseenter: function () {
-    $(this).css("background-color", "lightgray");
-  },
-  mouseleave: function () {
-    $(this).css("background-color", "lightblue");
-  },
-  click: function () {
-    $(this).css("background-color", "yellow");
-  },
-});
+// $("p").on({
+//   mouseenter: function () {
+//     $(this).css("background-color", "lightgray");
+//   },
+//   mouseleave: function () {
+//     $(this).css("background-color", "lightblue");
+//   },
+//   click: function () {
+//     $(this).css("background-color", "yellow");
+//   },
+// });
 
-$("button").click(function(){
-  $("p").toggle();
-});
-
+// $("button").click(function(){
+//   $("p").toggle();
+// });
 
 
 // $("button").click(function(){
@@ -31,3 +30,10 @@ $("button").click(function(){
 //   $("#div2").fadeToggle("slow");
 //   $("#div3").fadeToggle(3000);
 // });
+
+
+$("button").click(function(){
+  $("p").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+});
