@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var div = $("div");
+          div.animate({ height: "300px", opacity: "0.4" }, "slow");
+          div.animate({ width: "300px", opacity: "0.8" }, "slow");
+          div.animate({ height: "100px", opacity: "0.4" }, "slow");
+          div.animate({ width: "100px", opacity: "0.8" }, "slow");
+        });
+      });
+    </script>
   </head>
   <body>
-    <h1>Helloooooo</h1>
-    <h2 id="h2">Merhabaaaaaaaaaa</h2>
-    <h3 class="h3">Naber</h3>
-    <p>click me</p>
-    <button>Tikla</button>
-    <div
-      id="div1"
-      style="width: 80px; height: 80px; display: none; background-color: red"
-    >1</div>
-    <br />
-    <div
-      id="div2"
-      style="width: 80px; height: 80px; display: none; background-color: green"
-    >2</div>
-    <br />
-    <div
-      id="div3"
-      style="width: 80px; height: 80px; display: none; background-color: blue"
-    >3</div>
+    <button>Start Animation</button>
 
-    <script src="jquery-3.6.3.slim.min.js"></script>
-    <script src="App.js"></script>
+    <p>
+      By default, all HTML elements have a static position, and cannot be moved.
+      To manipulate the position, remember to first set the CSS position
+      property of the element to relative, fixed, or absolute!
+    </p>
+
+    <div
+      style="
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      "
+    ></div>
   </body>
 </html>
