@@ -40,8 +40,17 @@
 
 
 
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+//   });
+// });
+
 $(document).ready(function(){
-  $("button").click(function(){
-    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+    $("#btn1").click(function(){
+      alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+      alert("HTML: " + $("#test").html());
+    });
   });
-});
