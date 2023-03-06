@@ -4,19 +4,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("button").click(function () {
-          $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+        $("#btn1").click(function () {
+          $("p").append(" <b>Appended text</b>.");
+        });
+
+        $("#btn2").click(function () {
+          $("ol").append("<li>Appended item</li>");
         });
       });
     </script>
   </head>
   <body>
-    <p id="p1">jQuery is fun!!</p>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
 
-    <button>Click me</button>
-    <button id="btn1">Show Text</button>
-    <button id="btn2">Show HTML</button>
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
 
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list items</button>
     <script src="App.js"></script>
   </body>
 </html>

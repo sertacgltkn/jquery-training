@@ -46,11 +46,6 @@
 //   });
 // });
 
-$(document).ready(function(){
-    $("#btn1").click(function(){
-      alert("Text: " + $("#test").text());
-    });
-    $("#btn2").click(function(){
-      alert("HTML: " + $("#test").html());
-    });
+$("button").click(function(){
+    $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
   });
