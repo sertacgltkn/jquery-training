@@ -3,16 +3,30 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
-        $("button").click(function(){
+      $(document).ready(function () {
+        $("button").click(function () {
           var txt = "";
           txt += "Width of div: " + $("#div1").width() + "</br>";
           txt += "Height of div: " + $("#div1").height();
           $("#div1").html(txt);
         });
       });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("div").find("span").css({"color": "red", "border": "2px solid red"});
+      });
       </script>
       <style>
+        .descendants * { 
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+        </style>
+    <style>
       #div1 {
         height: 100px;
         width: 300px;
@@ -21,17 +35,29 @@
         border: 1px solid blue;
         background-color: lightblue;
       }
-      </style>
+    </style>
   </head>
   <body>
+    <div id="div1"></div>
+    <br />
+
+    <button>Display dimensions of div</button>
+
+    <p>width() - returns the width of an element.</p>
+    <p>height() - returns the height of an element.</p>
+    <div class="parent">
+      <div class="child1"></div>
+      <div class="child2"></div>
+    </div>
+    <div class="descendants" style="width:500px;">div (current element) 
+      <p>p (child)
+        <span>span (grandchild)</span>   
+      </p>
+      <p>p (child)
+        <span>span (grandchild)</span>
+      </p> 
+    </div>
     
-<div id="div1"></div>
-<br>
-
-<button>Display dimensions of div</button>
-
-<p>width() - returns the width of an element.</p>
-<p>height() - returns the height of an element.</p>
     <script src="App.js"></script>
   </body>
 </html>

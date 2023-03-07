@@ -49,3 +49,5 @@
 $("button").click(function(){
     $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
   });
+
+  $(".child1").siblings(); // <div class="child2"></div
