@@ -53,4 +53,4 @@
 //   $(".child1").siblings(); // <div class="child2"></div
 
 
-$("#div1").load("demo_test.txt");
+// $("#div1").load("demo_test.txt");
