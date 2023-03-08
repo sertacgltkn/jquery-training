@@ -13,19 +13,19 @@
       });
     </script>
     <script>
-      $(document).ready(function(){
-        $("div").find("span").css({"color": "red", "border": "2px solid red"});
+      $(document).ready(function () {
+        $("div").find("span").css({ color: "red", border: "2px solid red" });
       });
-      </script>
-      <style>
-        .descendants * { 
-          display: block;
-          border: 2px solid lightgrey;
-          color: lightgrey;
-          padding: 5px;
-          margin: 15px;
-        }
-        </style>
+    </script>
+    <style>
+      .descendants * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+      }
+    </style>
     <style>
       #div1 {
         height: 100px;
@@ -38,7 +38,7 @@
     </style>
   </head>
   <body>
-    <div id="div1"></div>
+    <!-- <div id="div1"></div>
     <br />
 
     <button>Display dimensions of div</button>
@@ -49,15 +49,22 @@
       <div class="child1"></div>
       <div class="child2"></div>
     </div>
-    <div class="descendants" style="width:500px;">div (current element) 
-      <p>p (child)
-        <span>span (grandchild)</span>   
-      </p>
-      <p>p (child)
+    <div class="descendants" style="width: 500px">
+      div (current element)
+      <p>
+        p (child)
         <span>span (grandchild)</span>
-      </p> 
-    </div>
-    
+      </p>
+      <p>
+        p (child)
+        <span>span (grandchild)</span>
+      </p>
+    </div> -->
+
+    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+    <button>Get External Content</button>
+
     <script src="App.js"></script>
   </body>
 </html>

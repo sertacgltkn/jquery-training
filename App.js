@@ -46,8 +46,15 @@
 //   });
 // });
 
-$("button").click(function(){
-    $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
-  });
+// $("button").click(function(){
+//     $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+//   });
 
-  $(".child1").siblings(); // <div class="child2"></div
+//   $(".child1").siblings(); // <div class="child2"></div
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("demo_test.txt");
+  });
+});
