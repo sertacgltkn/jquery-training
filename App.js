@@ -53,8 +53,4 @@
 //   $(".child1").siblings(); // <div class="child2"></div
 
 
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").load("demo_test.txt");
-  });
-});
+$("#div1").load("demo_test.txt");
