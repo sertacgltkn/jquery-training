@@ -1,104 +1,75 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <script src="jquery-3.6.3.slim.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("button").click(function () {
-          $.get("demo_test.asp", function (data, status) {
-            alert("Data: " + data + "\nStatus: " + status);
-          });
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("button").click(function () {
-          var txt = "";
-          txt += "Width of div: " + $("#div1").width() + "</br>";
-          txt += "Height of div: " + $("#div1").height();
-          $("#div1").html(txt);
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("div").find("span").css({ color: "red", border: "2px solid red" });
-      });
-    </script>
-    <style>
-      .descendants * {
-        display: block;
-        border: 2px solid lightgrey;
-        color: lightgrey;
-        padding: 5px;
-        margin: 15px;
-      }
-    </style>
-    <style>
-      #div1 {
-        height: 100px;
-        width: 300px;
-        padding: 10px;
-        margin: 3px;
-        border: 1px solid blue;
-        background-color: lightblue;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="div1"></div>
-    <br />
-
-    <button>Display dimensions of div</button>
-
-    <p>width() - returns the width of an element.</p>
-    <p>height() - returns the height of an element.</p>
-    <div class="parent">
-      <div class="child1"></div>
-      <div class="child2"></div>
-    </div>
-    <div class="descendants" style="width: 500px">
-      div (current element)
-      <p>
-        p (child)
-        <span>span (grandchild)</span>
-      </p>
-      <p>
-        p (child)
-        <span>span (grandchild)</span>
-      </p>
-    </div>
-
-    <button>Send an HTTP GET request to a page and get the result back</button>
-
-    <script src="App.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("button").click(function () {
-          $.post(
-            "demo_test_post.asp",
-            {
-              name: "Donald Duck",
-              city: "Duckburg",
-            },
-            function (data, status) {
-              alert("Data: " + data + "\nStatus: " + status);
-            }
-          );
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <button>Send an HTTP POST request to a page and get the result back</button>
-  </body>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john@example.com</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>mary@mail.com</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td>Anja</td>
+    <td>Ravendale</td>
+    <td>a_r@test.com</td>
+  </tr>
+  </tbody>
+</table>
+  
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
 </html>
